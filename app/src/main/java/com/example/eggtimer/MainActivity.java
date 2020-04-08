@@ -5,13 +5,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.CountDownTimer;
-import android.util.Log;
 import android.widget.Button;
 import android.widget.SeekBar;
 import android.widget.TextView;
 import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
+    MediaPlayer mayer;
     CountDownTimer countDownTimer;
     Button controllerButton;
     Boolean counterIsActive=false;
@@ -52,8 +52,8 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onFinish() {
                     resetTimer();
-                    MediaPlayer mplayer = MediaPlayer.create(getApplicationContext(), R.raw.airhorn);
-                    mplayer.start();
+                     mayer = MediaPlayer.create(getApplicationContext(), R.raw.Airhorn);
+                    mayer.start();
 
                 }
             }.start();
